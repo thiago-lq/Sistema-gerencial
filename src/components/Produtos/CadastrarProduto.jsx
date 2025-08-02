@@ -57,7 +57,7 @@ export default function CadastrarProduto({
           <button
             type="submit"
             className="bg-black text-white text-lg hover:opacity-60 cursor-pointer px-8 py-3 rounded-md"
-            onClick={resetarFormularioProduto}
+            onClick={resetarFormularioProduto()}
           >
             Cadastrar
           </button>
