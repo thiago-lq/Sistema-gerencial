@@ -24,7 +24,9 @@ export default function ListaDeProdutos({listaProduto, produtoEditar, excluirPro
                             className="bg-white hover:bg-gray-50 rounded-lg shadow-sm transition">
                             <td className="p-3 font-medium capitalize">{p.nome}</td>
                             <td className="p-3 font-medium capitalize">{p.codigo}</td>
-                            <td className="p-3 font-medium capitalize">{p.preco}</td>
+                            <td className="p-3 font-medium capitalize">
+                                R$ {parseFloat(p.preco).toFixed(2)}
+                            </td>
                             <td className="p-3 font-medium capitalize">{p.quantidade}</td>
                             <td className="p-3 w-[1rem]"><img src={p.imagem} alt="imagem" /></td>
                             <td className="p-3 space-x-3">
