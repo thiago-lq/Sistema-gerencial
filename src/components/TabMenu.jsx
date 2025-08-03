@@ -252,9 +252,9 @@ export default function TabMenu({logout}) {
         </div>
         <div className="flex gap-10">
             <button
-          className={`pb-2 ${
+          className={`pb-2 hover:opacity-60 text-lg transition cursor-pointer ${
             tabMenu === "CadastroClientes"
-              ? "border-b-2 border-black font-bold text-lg"
+              ? "border-b-2 border-black font-bold text-xl"
               : ""
           }`}
           onClick={() => setTabMenu("CadastroClientes")}
@@ -262,9 +262,9 @@ export default function TabMenu({logout}) {
           <p className="font-semibold">Cadastro de Clientes</p>
         </button>
         <button
-          className={`pb-2 ${
+          className={`pb-2 hover:opacity-60 text-lg transition cursor-pointer ${
             tabMenu === "CadastroFornecedores"
-              ? "border-b-2 border-black font-bold text-lg"
+              ? "border-b-2 border-black font-bold text-xl"
               : ""
           }`}
           onClick={() => setTabMenu("CadastroFornecedores")}
@@ -272,31 +272,31 @@ export default function TabMenu({logout}) {
           <p className="font-semibold">Cadastro de Fornecedores</p>
         </button>
         <button
-          className={`pb-2 ${
-            tabMenu === "Produtos" ? "border-b-2 border-black font-bold text-lg" : ""
+          className={`pb-2 hover:opacity-60 text-lg transition cursor-pointer ${
+            tabMenu === "Produtos" ? "border-b-2 border-black font-bold text-xl" : ""
           }`}
           onClick={() => setTabMenu("Produtos")}
         >
           <p className="font-semibold">Produtos</p>
         </button>
         <button
-          className={`pb-2 ${
-            tabMenu === "Financeiro" ? "border-b-2 border-black font-bold text-lg" : ""
+          className={`pb-2 hover:opacity-60 text-lg transition cursor-pointer ${
+            tabMenu === "Financeiro" ? "border-b-2 border-black font-bold text-xl" : ""
           }`}
           onClick={() => setTabMenu("Financeiro")}
         >
           <p className="font-semibold">Financeiro</p>
         </button>
         <button
-          className={`pb-2 ${
-            tabMenu === "Vendas" ? "border-b-2 border-black font-bold text-lg" : ""
+          className={`pb-2 hover:opacity-60 text-lg transition cursor-pointer ${
+            tabMenu === "Vendas" ? "border-b-2 border-black font-bold text-xl" : ""
           }`}
           onClick={() => setTabMenu("Vendas")}
         >
           <p className="font-semibold">Vendas</p>
         </button>
         <button
-          className={`pb-2 ${
+          className={`pb-2 hover:opacity-60 text-lg transition cursor-pointer ${
             tabMenu === "CRM" ? "border-b-2 border-black font-bold text-lg" : ""
           }`}
           onClick={() => setTabMenu("CRM")}
@@ -306,7 +306,7 @@ export default function TabMenu({logout}) {
         </div>
         <div className="mx-4 my-5">
           <button onClick={logout}>
-            <img src={Logout} alt="Sair" className="hover:opacity-40 cursor-pointer h-[2rem]"/>
+            <img src={Logout} alt="Sair" className="hover:opacity-60 cursor-pointer h-[2rem]"/>
           </button>
         </div>
       </div>

@@ -10,7 +10,7 @@ export default function CadastroClientes({ aoSalvar, listaCliente, clienteEditar
             <div>
                 <div className="flex gap-10 bg-white w-full shadow-lg">
                     <button
-                        className={`p-5 ${
+                        className={`p-5 hover:opacity-60 cursor-pointer transition text-lg ${
                             tabMenu === "CadastrarCliente"
                             ? "font-bold p-3"
                             : ""
@@ -20,7 +20,7 @@ export default function CadastroClientes({ aoSalvar, listaCliente, clienteEditar
                         Cadastrar Cliente
                     </button>
                     <button
-                        className={`p-5 ${
+                        className={`p-5 hover:opacity-60 cursor-pointer transition text-lg ${
                             tabMenu === "ListaCliente"
                             ? "font-bold p-3"
                             : ""

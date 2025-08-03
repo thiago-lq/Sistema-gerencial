@@ -10,7 +10,7 @@ export default function CadastroProduto({ aoSalvar, listaProduto, produtoEditar,
             <div>
                 <div className="flex gap-10 bg-white w-full shadow-lg">
                     <button
-                        className={`p-5 ${
+                        className={`p-5 hover:opacity-60 text-lg transition cursor-pointer ${
                             tabMenu === "CadastrarProduto"
                             ? "font-bold p-3"
                             : ""
@@ -20,7 +20,7 @@ export default function CadastroProduto({ aoSalvar, listaProduto, produtoEditar,
                         Cadastrar Produto
                     </button>
                     <button
-                        className={`p-5 ${
+                        className={`p-5 hover:opacity-60 text-lg transition cursor-pointer ${
                             tabMenu === "ListaProduto"
                             ? "font-bold p-3"
                             : ""
