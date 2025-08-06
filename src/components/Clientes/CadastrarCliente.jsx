@@ -50,11 +50,11 @@ export default function CadastrarCliente({
             />
           </div>
           <div className="flex flex-col gap-3">
-            <h1>Rua e número</h1>
+            <h1>Endereço</h1>
             <input
               type="text"
-              name="ruaNumero"
-              placeholder="Digite a rua e número"
+              name="endereco"
+              placeholder="Digite o endereço"
               className="border-2 border-black rounded-md p-2 bg-white"
               required
             />
@@ -69,37 +69,6 @@ export default function CadastrarCliente({
               required
             />
           </div>
-          <div className="flex flex-col gap-3">
-            <h1>Bairro</h1>
-            <input
-              type="text"
-              name="bairro"
-              placeholder="Digite o bairro"
-              className="border-2 border-black rounded-md p-2 bg-white"
-              required
-            />
-          </div>
-          <div className="flex flex-col gap-3">
-            <h1>Cep</h1>
-            <input
-              type="tel"
-              name="cep"
-              placeholder="Digite o Cep"
-              className="border-2 border-black rounded-md p-2 bg-white"
-              required
-            />
-          </div>
-          <div className="flex flex-col gap-3">
-            <h1>Data de cadastro</h1>
-            <input
-              type="date"
-              name="dataCadastro"
-              placeholder="dd/mm/aaaa"
-              className="border-2 border-black rounded-md w-full p-2 bg-white"
-              required
-            />
-          </div>
-
           <div className="col-span-3 flex justify-center p-5">
             <button
               type="submit"

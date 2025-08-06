@@ -8,7 +8,7 @@ export default function CadastrarFornecedor({
         onSubmit={aoSalvar}
         className="space-y-10 gap-10"
       >
-        <div className="grid grid-cols-2 gap-10">
+        <div className="grid grid-cols-3 gap-10">
           <div className="flex flex-col gap-3">
           <h1>Nome</h1>
           <input
