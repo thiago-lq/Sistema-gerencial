@@ -1,7 +1,9 @@
 import { useState } from "react";
 import CadastrarFornecedor from "./CadastrarFornecedor";
 import ListaDeFornecedor from "./ListaDeFornecedor";
-export default function CadastroFornecedor({ aoSalvar, listaFornecedor, fornecedorEditar, excluirFornecedor, resetarFormularioFornecedor, salvarEdicao, modalEditarFornecedor, editarFornecedor, setEditarFornecedor }) {
+import RelatorioFornecedores from "./RelatoriosFonecedores";
+
+export default function CadastroFornecedor({ aoSalvar, listaFornecedor, fornecedorEditar, excluirFornecedor, resetarFormularioFornecedor, salvarEdicao, modalEditarFornecedor, editarFornecedor, setEditarFornecedor, fornecedores }) {
     const [tabMenu, setTabMenu] = useState("CadastrarFornecedor")
     
     
@@ -29,6 +31,14 @@ export default function CadastroFornecedor({ aoSalvar, listaFornecedor, forneced
                         >
                         Lista de Fornecedor
                     </button>
+                    <button
+                        className={`p-5 hover:opacity-60 text-lg transition cursor-pointer ${
+                            tabMenu === "RelatorioFornecedores" ? "font-bold p-3" : ""
+                        }`}
+                        onClick={() => setTabMenu("RelatorioFornecedores")}
+                        >
+                        <p>Relatório Fornecedores</p>
+                    </button>
                 </div>
             </div>
             {tabMenu === "CadastrarFornecedor" && 
@@ -47,6 +57,9 @@ export default function CadastroFornecedor({ aoSalvar, listaFornecedor, forneced
                     editarFornecedor={editarFornecedor}
                     setEditarFornecedor={setEditarFornecedor}
                 />
+            }
+            {tabMenu === "RelatorioFornecedores" && 
+                <RelatorioFornecedores fornecedores={fornecedores}/>
             }
         </div>
     )

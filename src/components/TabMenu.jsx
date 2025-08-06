@@ -329,6 +329,7 @@ export default function TabMenu({logout}) {
             aoSalvar={SalvaDBFornecedores}
             listaFornecedor={fornecedor}
             fornecedorEditar={fornecedorEditar}
+            fornecedores={fornecedor}
             excluirFornecedor={excluirFornecedor}
             salvarEdicao={salvarEdicaoFornecedores}
             modalEditarFornecedor={modalEditarFornecedor}
@@ -341,6 +342,7 @@ export default function TabMenu({logout}) {
             aoSalvar={SalvaDBProdutos}
             listaProduto={produto}
             produtoEditar={produtoEditar}
+            produtos={produto}
             excluirProduto={excluirProduto}
             salvarEdicao={salvarEdicaoProdutos}
             modalEditarProduto={modalEditarProduto}

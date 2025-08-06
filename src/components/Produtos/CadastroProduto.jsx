@@ -1,7 +1,9 @@
 import { useState } from "react";
 import CadastrarProduto from "./CadastrarProduto";
 import ListaDeProdutos from "./ListaDeProdutos";
-export default function CadastroProduto({ aoSalvar, listaProduto, produtoEditar, excluirProduto, resetarFormularioProduto, salvarEdicao, modalEditarProduto, editarProduto, setEditarProduto }) {
+import RelatorioProdutos from "./RelatoriosProdutos";
+
+export default function CadastroProduto({ aoSalvar, listaProduto, produtoEditar, excluirProduto, resetarFormularioProduto, salvarEdicao, modalEditarProduto, editarProduto, setEditarProduto, produtos }) {
     const [tabMenu, setTabMenu] = useState("CadastrarProduto")
     
     
@@ -29,6 +31,14 @@ export default function CadastroProduto({ aoSalvar, listaProduto, produtoEditar,
                         >
                         Lista de Produto
                     </button>
+                    <button
+                        className={`p-5 hover:opacity-60 text-lg transition cursor-pointer ${
+                            tabMenu === "RelatorioProdutos" ? "font-bold p-3" : ""
+                        }`}
+                        onClick={() => setTabMenu("RelatorioProdutos")}
+                        >
+                        <p>Relatório Produtos</p>
+                    </button>
                 </div>
             </div>
             {tabMenu === "CadastrarProduto" && 
@@ -48,6 +58,7 @@ export default function CadastroProduto({ aoSalvar, listaProduto, produtoEditar,
                     setEditarProduto={setEditarProduto}
                 />
             }
+            {tabMenu === "RelatorioProdutos" && <RelatorioProdutos produtos={produtos} />}
         </div>
     )
 }
