@@ -1,64 +1,113 @@
 export default function CadastrarCliente({
   aoSalvar,
-  resetarFormularioCliente,
 }) {
   return (
     <div className="m-15 justify-center">
       <form
         id="ClientesADD"
         onSubmit={aoSalvar}
-        className="space-y-10 grid grid-cols-3 gap-10"
+        className="space-y-10 gap-10 justify between"
       >
-        <input
-          type="text"
-          name="nome"
-          placeholder="Digite o nome"
-          className="border-2 border-black rounded-md p-2 bg-white"
-          required
-        />
-        <input
-          type="text"
-          name="cpf"
-          placeholder="Digite o CPF"
-          className="border-2 border-black rounded-md p-2 bg-white"
-          required
-        ></input>
-        <input
-          type="tel"
-          name="celular"
-          placeholder="Digite o número de celular"
-          className="border-2 border-black rounded-md p-2 bg-white"
-          required
-        ></input>
-        <input
-          type="email"
-          name="email"
-          placeholder="Digite o e-mail"
-          className="border-2 border-black rounded-md p-2 bg-white"
-          required
-        ></input>
-        <input
-          type="text"
-          name="endereco"
-          placeholder="Digite o endereço"
-          className="border-2 border-black rounded-md p-2 bg-white"
-          required
-        ></input>
-        <input
-          type="date"
-          name="data"
-          placeholder="dd/mm/aaaa"
-          className="border-2 border-black rounded-md w-max ml-18 p-2 bg-white"
-          required
-        ></input>
-        <div className="col-span-3 flex justify-center p-5">
-          <button
-            type="submit"
-            className="bg-black text-white text-lg hover:opacity-60 cursor-pointer px-8 py-3 rounded-md"
-            onClick={resetarFormularioCliente()}
-          >
-            Cadastrar
-          </button>
+        <div className="grid grid-cols-3 gap-10">
+          <div className="flex flex-col gap-3">
+            <h1>Nome</h1>
+            <input
+              type="text"
+              name="nome"
+              placeholder="Digite o nome"
+              className="border-2 border-black rounded-md p-2 bg-white"
+              required
+            />
+          </div>
+          <div className="flex flex-col gap-3">
+            <h1>CPF</h1>
+            <input
+              type="text"
+              name="cpf"
+              placeholder="Digite o CPF"
+              className="border-2 border-black rounded-md p-2 bg-white"
+              required
+            />
+          </div>
+          <div className="flex flex-col gap-3">
+            <h1>Celular</h1>
+            <input
+              type="tel"
+              name="celular"
+              placeholder="Digite o número"
+              className="border-2 border-black rounded-md p-2 bg-white"
+              required
+            />
+          </div>
+          <div className="flex flex-col gap-3">
+            <h1>E-mail</h1>
+            <input
+              type="email"
+              name="email"
+              placeholder="Digite o e-mail"
+              className="border-2 border-black rounded-md p-2 bg-white"
+              required
+            />
+          </div>
+          <div className="flex flex-col gap-3">
+            <h1>Rua e número</h1>
+            <input
+              type="text"
+              name="ruaNumero"
+              placeholder="Digite a rua e número"
+              className="border-2 border-black rounded-md p-2 bg-white"
+              required
+            />
+          </div>
+          <div className="flex flex-col gap-3">
+            <h1>Data de nascimento</h1>
+            <input
+              type="date"
+              name="dataNascimento"
+              placeholder="dd/mm/aaaa"
+              className="border-2 border-black rounded-md w-full p-2 bg-white"
+              required
+            />
+          </div>
+          <div className="flex flex-col gap-3">
+            <h1>Bairro</h1>
+            <input
+              type="text"
+              name="bairro"
+              placeholder="Digite o bairro"
+              className="border-2 border-black rounded-md p-2 bg-white"
+              required
+            />
+          </div>
+          <div className="flex flex-col gap-3">
+            <h1>Cep</h1>
+            <input
+              type="tel"
+              name="cep"
+              placeholder="Digite o Cep"
+              className="border-2 border-black rounded-md p-2 bg-white"
+              required
+            />
+          </div>
+          <div className="flex flex-col gap-3">
+            <h1>Data de cadastro</h1>
+            <input
+              type="date"
+              name="dataCadastro"
+              placeholder="dd/mm/aaaa"
+              className="border-2 border-black rounded-md w-full p-2 bg-white"
+              required
+            />
+          </div>
+
+          <div className="col-span-3 flex justify-center p-5">
+            <button
+              type="submit"
+              className="bg-black text-white text-lg hover:opacity-60 cursor-pointer px-8 py-3 rounded-md"
+            >
+              Cadastrar
+            </button>
+          </div>
         </div>
       </form>
     </div>

@@ -1,7 +1,9 @@
 import { useState } from "react";
 import CadastrarCliente from "./CadastrarCliente";
 import ListaDeClientes from "./ListaDeClientes";
-export default function CadastroClientes({ aoSalvar, listaCliente, clienteEditar, excluirCliente, resetarFormularioCliente, salvarEdicao, modalEditarCliente, editarCliente, setEditarCliente }) {
+import RelatorioClientes from "./RelatoriosClientes";
+
+export default function CadastroClientes({ aoSalvar, listaCliente, clienteEditar, excluirCliente, salvarEdicao, modalEditarCliente, editarCliente, setEditarCliente, clientes }) {
     const [tabMenu, setTabMenu] = useState("CadastrarCliente")
     
     
@@ -29,12 +31,19 @@ export default function CadastroClientes({ aoSalvar, listaCliente, clienteEditar
                         >
                         Lista de Clientes
                     </button>
+                    <button
+                    className={`p-5 hover:opacity-60 cursor-pointer transition text-lg ${
+                        tabMenu === "RelatorioClientes" ? "font-bold p-3" : ""
+                    }`}
+                    onClick={() => setTabMenu("RelatorioClientes")}
+                    >
+                    <p>Relatório Clientes</p>
+                    </button>
                 </div>
             </div>
             {tabMenu === "CadastrarCliente" && 
                 <CadastrarCliente
                     aoSalvar={aoSalvar}
-                    resetarFormularioCliente={resetarFormularioCliente}
                 />
             }
             {tabMenu === "ListaCliente" &&
@@ -47,6 +56,9 @@ export default function CadastroClientes({ aoSalvar, listaCliente, clienteEditar
                     editarCliente={editarCliente}
                     setEditarCliente={setEditarCliente}
                 />
+            }
+            {tabMenu === "RelatorioClientes" && 
+                <RelatorioClientes clientes={clientes} />
             }
         </div>
     )

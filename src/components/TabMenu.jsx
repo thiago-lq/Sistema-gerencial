@@ -98,7 +98,7 @@ export default function TabMenu({logout}) {
       return;
     }
     await addDoc(collection(db, "Clientes"), clientes);
-
+    resetarFormularioCliente();
     alert("Cliente cadastrado com sucesso!");
   };
 
@@ -112,7 +112,7 @@ export default function TabMenu({logout}) {
       return;
     }
     await addDoc(collection(db, "Fornecedores"), fornecedores);
-
+    resetarFormularioFornecedor();
     alert("Fornecedor cadastrado com sucesso!");
   };
 
@@ -126,7 +126,7 @@ export default function TabMenu({logout}) {
       return;
     }
     await addDoc(collection(db, "Produtos"), produtos);
-
+    resetarFormularioProduto();
     alert("Produto cadastrado com sucesso!");
   };
 
@@ -316,8 +316,8 @@ export default function TabMenu({logout}) {
               aoSalvar={SalvaDBClientes}
               listaCliente={cliente}
               clienteEditar={clienteEditar}
+              clientes={cliente}
               excluirCliente={excluirCliente}
-              resetarFormularioCliente={resetarFormularioCliente}
               salvarEdicao={salvarEdicaoClientes}
               modalEditarCliente={modalEditarCliente}
               editarCliente={editarCliente}
@@ -330,7 +330,6 @@ export default function TabMenu({logout}) {
             listaFornecedor={fornecedor}
             fornecedorEditar={fornecedorEditar}
             excluirFornecedor={excluirFornecedor}
-            resetarFormularioFornecedor={resetarFormularioFornecedor}
             salvarEdicao={salvarEdicaoFornecedores}
             modalEditarFornecedor={modalEditarFornecedor}
             editarFornecedor={editarFornecedor}
@@ -343,7 +342,6 @@ export default function TabMenu({logout}) {
             listaProduto={produto}
             produtoEditar={produtoEditar}
             excluirProduto={excluirProduto}
-            resetarFormularioProduto={resetarFormularioProduto}
             salvarEdicao={salvarEdicaoProdutos}
             modalEditarProduto={modalEditarProduto}
             editarProduto={editarProduto}
