@@ -17,10 +17,6 @@ export default function RelatorioFornecedores({ fornecedores }) {
   const fornecedoresCNPJ = fornecedores.filter(f => f.cnpjCpf && f.cnpjCpf.length > 14);
   const fornecedoresCPF = fornecedores.filter(f => f.cnpjCpf && f.cnpjCpf.length <= 14);
 
-  const fornecedoresOrdenados = [...fornecedores].sort((a, b) =>
-    a.nome.localeCompare(b.nome)
-  );
-
   // Dados para o gráfico
   const data = {
     labels: ["CNPJ", "CPF"],
