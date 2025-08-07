@@ -3,7 +3,7 @@ export default function ClientesEditar({modalEditarCliente, salvarEdicao, editar
     
     return (
     <div className="fixed inset-0 bg-[rgba(0,0,0,0.6)] z-50 flex items-center justify-center p-3">
-        <div className="bg-white p-3 gap-5 rounded-xl w-full max-w-md relative shadow-lg">
+        <div className="bg-white p-3 gap-5 rounded-xl w-full max-w-md relative shadow-lg overflow-y-auto max-h-[90vh]">
             <div className="flex justify-between">
                 <h3 className="text-2xl font-bold mb-6 text-gray-900">Editar Cliente</h3>
                 <button className="text-xl font-bold mb-6 hover:bg-black hover:text-white rounded-2xl px-2 text-center"
@@ -74,6 +74,34 @@ export default function ClientesEditar({modalEditarCliente, salvarEdicao, editar
                             endereco: e.target.value
                         })}
                         className="w-full border-2 border-black rounded-lg bg-white p-2"
+                        required>
+                </input>
+                <h1>Altura</h1>
+                <input type="number"
+                        placeholder="Digite a altura"
+                        value={editarCliente.altura}
+                        onChange={(e) =>
+                            setEditarCliente({
+                                ...editarCliente,
+                                altura: e.target.value
+                            })
+                        }
+                        className="w-full border-2 border-black rounded-lg p-2 bg-white"
+                        min="0"
+                        step="0.1"
+                        required>
+                </input>
+                <h1>Peso</h1>
+                <input type="number"
+                        placeholder="Digite o peso"
+                        value={editarCliente.peso}
+                        onChange={(e) =>
+                            setEditarCliente({
+                                ...editarCliente,
+                                peso: e.target.value
+                            })
+                        }
+                        className="w-full border-2 border-black rounded-lg p-2 bg-white"
                         required>
                 </input>
                 <h1>Data de Nascimento</h1>

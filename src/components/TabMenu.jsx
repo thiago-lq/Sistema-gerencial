@@ -92,8 +92,8 @@ export default function TabMenu({logout}) {
     e.preventDefault();
     const formulario = document.getElementById("ClientesADD");
     const clientes = serializeForm(formulario);
-    const { nome, cpf, celular, email, endereco, data } = clientes;
-    if (!nome || !cpf || !celular || !email || !endereco || !data) {
+    const { nome, cpf, celular, email, endereco, data, peso, altura } = clientes;
+    if (!nome || !cpf || !celular || !email || !endereco || !data || !peso || !altura) {
       alert("Por favor, preencha todos os campos.");
       return;
     }
@@ -181,9 +181,9 @@ export default function TabMenu({logout}) {
   async function salvarEdicaoClientes(e) {
     e.preventDefault();
     const ref = doc(db, "Clientes", editarCliente.id);
-    const { nome, cpf, celular, email, endereco, data } =
+    const { nome, cpf, celular, email, endereco, data, peso, altura } =
       editarCliente;
-    if (!nome || !cpf || !celular || !email || !endereco || !data) {
+    if (!nome || !cpf || !celular || !email || !endereco || !data || !peso || !altura) {
       alert("Por favor, preencha todos os campos.");
       return;
     }  
@@ -195,6 +195,8 @@ export default function TabMenu({logout}) {
       email,
       endereco,
       data,
+      peso,
+      altura
     });
     alert("Cliente atualizado")
     setModalEditarCliente(false)

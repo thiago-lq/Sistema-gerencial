@@ -60,6 +60,30 @@ export default function CadastrarCliente({
             />
           </div>
           <div className="flex flex-col gap-3">
+            <h1>Peso</h1>
+            <input
+              type="number"
+              name="peso"
+              placeholder="Digite o peso"
+              className="border-2 border-black rounded-md p-2 bg-white"
+              min="0"
+              step="0.1"
+              required
+            />
+          </div>
+          <div className="flex flex-col gap-3">
+            <h1>Altura</h1>
+            <input
+              type="number"
+              name="altura"
+              placeholder="Digite a altura"
+              className="border-2 border-black rounded-md p-2 bg-white"
+              min="0"
+              step="0.1"
+              required
+            />
+          </div>
+          <div className="flex flex-col gap-3">
             <h1>Data de nascimento</h1>
             <input
               type="date"
