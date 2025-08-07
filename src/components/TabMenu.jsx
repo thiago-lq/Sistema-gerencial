@@ -16,6 +16,7 @@ import Logo from "../assets/logo.png";
 import Financeiro from "./Financeiro";
 import Vendas from "./Vendas";
 import CRM from "./CRM";
+import DashboardGeral from "./DashboardGeral";
 
 export default function TabMenu({logout}) {
   const [tabMenu, setTabMenu] = useState("CadastroClientes");
@@ -305,6 +306,14 @@ export default function TabMenu({logout}) {
         >
           <p className="font-semibold">CRM</p>
         </button>
+        <button
+          className={`pb-2 hover:opacity-60 text-lg transition cursor-pointer ${
+            tabMenu === "DashboardGeral" ? "border-b-2 border-black font-bold text-lg" : ""
+          }`}
+          onClick={() => setTabMenu("DashboardGeral")}
+        >
+          <p className="font-semibold">Dashboard geral</p>
+        </button>
         </div>
         <div className="mx-4 my-5">
           <button onClick={logout}>
@@ -363,6 +372,10 @@ export default function TabMenu({logout}) {
         {
           tabMenu === "CRM" &&
           <CRM/>
+        }
+        {
+          tabMenu === "DashboardGeral" &&
+          <DashboardGeral/>
         }
       </div>
     </div>
