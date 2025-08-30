@@ -1,22 +1,25 @@
-# Sistema Gerencial
 
-Este é um projeto de estudo desenvolvido com React, que simula um sistema gerencial para uma loja.
+---
+
+# Sistema Gerencial - Loja de Bicicletas
+
+Este é um **projeto de estudo** desenvolvido com **React**, que simula um sistema gerencial para uma loja de bicicletas.
 O sistema implementa funcionalidades de cadastro, gerenciamento de dados e geração de relatórios com gráficos, servindo como prática em desenvolvimento de aplicações web modernas.
 
 
 ## Funcionalidades
 
- # Perfis de usuário
+* **Perfis de usuário**
 
   * Controle de acesso com diferentes lógicas de perfil.
 
- # Cadastro e gerenciamento
+* **Cadastro e gerenciamento**
 
   * Clientes
   * Fornecedores
   * Produtos
 
- # Relatórios e listagens
+* **Relatórios e listagens**
 
   * Listagem completa de clientes, fornecedores e produtos
   * Relatórios com gráficos (pie charts) para análise visual dos dados
@@ -24,14 +27,14 @@ O sistema implementa funcionalidades de cadastro, gerenciamento de dados e gera�
 
 ## Tecnologias utilizadas
 
- # React (frontend e lógica de interface)
- # Biblioteca de gráficos (Pie Chart) para relatórios visuais
- # LocalStorage / Mock de dados (persistência simples para estudo)
+* **React** (frontend e lógica de interface)
+* **Biblioteca de gráficos (Pie Chart)** para relatórios visuais
+* **LocalStorage / Mock de dados** (persistência simples para estudo)
 
 
 ## Como executar
 
-1. Certifique-se de ter o Node.js 18+ instalado.
+1. Certifique-se de ter o **Node.js 18+** instalado.
 
 2. Clone ou baixe este repositório.
 
@@ -56,7 +59,7 @@ O sistema implementa funcionalidades de cadastro, gerenciamento de dados e gera�
 
 ## Objetivo do projeto
 
-Este sistema foi criado com fins de aprendizado em React, explorando conceitos como:
+Este sistema foi criado com fins de **aprendizado em React**, explorando conceitos como:
 
 * Criação de componentes funcionais
 * Uso de hooks para gerenciamento de estado
@@ -64,3 +67,4 @@ Este sistema foi criado com fins de aprendizado em React, explorando conceitos c
 * Geração de relatórios visuais com gráficos
 * Estruturação de uma aplicação front-end organizada
 
+---
