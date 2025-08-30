@@ -1,9 +1,9 @@
 
 ---
 
-# Sistema Gerencial - Loja de Bicicletas
+# Sistema Gerencial
 
-Este é um **projeto de estudo** desenvolvido com **React**, que simula um sistema gerencial para uma loja de bicicletas.
+Este é um **projeto de estudo** desenvolvido com **React**, que simula um sistema gerencial para uma loja.
 O sistema implementa funcionalidades de cadastro, gerenciamento de dados e geração de relatórios com gráficos, servindo como prática em desenvolvimento de aplicações web modernas.
 
 
